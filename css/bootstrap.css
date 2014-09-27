@@ -205,10 +205,10 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #ffffff;
+  font-size: 17px;
+  line-height: 1.4em;
+  color: #fff;
+  background-color: #03799B;
 }
 input,
 button,
@@ -219,12 +219,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: #FFC700;
   text-decoration: none;
+  font-weight: bold;  
 }
 a:hover,
 a:focus {
-  color: #2a6496;
   text-decoration: underline;
 }
 a:focus {
@@ -247,6 +247,16 @@ img {
   width: 100% \9;
   max-width: 100%;
   height: auto;
+}
+#img-composite {
+    position: relative;
+}
+#img-ios-devices {
+    position: absolute;
+    right: 20px;
+    bottom:-30px;
+    max-width: 60%;
+    z-index: 100;
 }
 .img-rounded {
   border-radius: 6px;
@@ -308,7 +318,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #FFC700;
 }
 h1 small,
 h2 small,
@@ -336,7 +346,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #777777;
+  color: #FFC700;
 }
 h1,
 .h1,
@@ -386,7 +396,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 45px;
 }
 h2,
 .h2 {
@@ -398,7 +408,8 @@ h3,
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 30px;
+  margin-bottom: 35px;  
 }
 h5,
 .h5 {
@@ -529,14 +540,30 @@ a.bg-danger:hover {
 }
 ul,
 ol {
+  list-style: none;  
   margin-top: 0;
   margin-bottom: 10px;
+  padding-left: 1.1em; 
+  text-indent: -1.1em;
+  line-height: 1.4em;  
 }
 ul ul,
 ol ul,
 ul ol,
 ol ol {
   margin-bottom: 0;
+}
+li {
+  margin-bottom: .3em;
+}
+li:before {
+    content: "\2022"; /* /2022 is the numerical unicode for &bull; */
+    color: #FFC700;
+    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:.4em; /* give the bullet some padding from the text Make sure to use em*/
+    position:relative;
+        top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+
 }
 .list-unstyled {
   padding-left: 0;
@@ -649,8 +676,8 @@ address {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (min-width: 768px) {
   .container {
@@ -682,6 +709,7 @@ address {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: 0px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
