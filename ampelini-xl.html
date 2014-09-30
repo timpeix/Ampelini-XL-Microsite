@@ -41,12 +41,15 @@
       -->
         
       <div class="jumbotron">
-        <h1>This head introduces the new amazing Ampelini XL app</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <img src="img/Logo-Ampelini-XL.svg" alt="Ampelini XL Logo" id="ampelini-logo-top">
+        <h1 id="head-top">This head introduces the new amazing Ampelini XL app</h1>
         <div id="img-composite">
+          <img src="img/Logo-Ampelini-XL.svg" alt="Ampelini XL Logo" id="ampelini-logo">
+          <h1 id="head-layout">That head introduces the new amazing Ampelini XL app</h1>
           <img src="img/ampelinis-dash.png" alt="Ampelinis die Hönde ausstreckend" id="img-ampelinis-dash">   
-          <img src="img/ampelini-welt-komplett.jpg" alt="Ampelini Welt mit Stadt und Bewohnern" class="img-responsive shadow">  
-          <img src="img/iphone-ipad-app.png" alt="iPhone und iPad mit Ampelini XL Spielausschnitt" id="img-ios-devices"> 
+          <img src="img/ampelini-welt-komplett.jpg" alt="Ampelini Welt mit Stadt und Bewohnern" class="img-responsive shadow" id="ampelini-welt">  
+          <img src="img/iphone-ipad-app.png" alt="iPhone und iPad mit Ampelini XL Spielausschnitt" id="img-ios-devices">
+          <a href="http://www.google.com"><img src="img/App_Store_Badge_DE_35x40.svg" alt="App Store Badge" id="app-store-badge"></a> 
         </div>
       </div>
       <div style="height:10px;"></div>
@@ -103,5 +106,13 @@ Bei Problemen schicke uns bitte eine Nachricht <a href="http://www.ampelini.de/s
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/modernizr-svg.js"></script>
+    <script>
+      if(!Modernizr.svg) {
+        $('img[src$="svg"]').attr('src', function() {  
+          return $(this).attr('src').replace('.svg', '.png');
+        });
+      }
+    </script>
   </body>
 </html>

@@ -241,16 +241,6 @@ img {
 .shadow {
     -webkit-filter: drop-shadow(0px 10px 7px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0px 10px 7px rgba(0, 0, 0, 0.2)); 
-/*    
-  -webkit-box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.3);  
-  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.3);
-    
-    
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.0)));
-    background: -moz-linear-gradient(top,rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3));
-*/
 }
 .img-responsive,
 .thumbnail > img,
@@ -258,30 +248,64 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endC
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  width: 100% \9;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
+  margin-right: auto; 
+  margin-left: auto;  
   
+}
+
+#ampelini-logo-top {
+    margin-right: auto; 
+    margin-left: auto;
+    margin-bottom: -50px; 
+    width: 430px;
+    display: block;
+    z-index: 0;
+    max-width: 90%;
+}
+#head-top {
+    position: relative;
+    max-width: 200px;
+    display: block;
+    text-align: center;
+    font-size: 35px;
 }
 #img-composite {
     position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
 }
-.gradient {
+#ampelini-welt {
+    max-width: 100%;
+}
+#head-layout {
     position: absolute;
-    left:0;
-    bottom:-40px;
-    height:40px;
-    width:100%;
-    opacity: 0.3;
-    filter: alpha(opacity=30); /* For IE8 and earlier */
+    left:20px;
+    top:40px;
+    width: 400px;
+    z-index: 100;
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.7));
+}
+#head-top, #head-layout {
+    text-shadow:
+     -2px -2px 0 #00344c,  
+      2px -2px 0 #00344c,
+      -2px 2px 0 #00344c,
+       2px 2px 0 #00344c;
 }
 #img-ampelinis-dash {
     position: absolute;
     right:0px;
     top:-170px;
     height: 400px;
+    z-index: 100;
+}
+#app-store-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
     z-index: 100;
 }
 #img-ios-devices {
@@ -355,6 +379,12 @@ h6,
   font-weight: 500;
   line-height: 1.1;
   color: #FFC700;
+  text-align: left;
+  text-shadow:
+     -2px -2px 0 #00344c,  
+      2px -2px 0 #00344c,
+      -2px 2px 0 #00344c,
+       2px 2px 0 #00344c;
 }
 h1 small,
 h2 small,
@@ -413,8 +443,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 25px;
 }
 h4 small,
 .h4 small,
@@ -432,7 +462,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 45px;
+  font-size: 40px;
 }
 h2,
 .h2 {
@@ -445,7 +475,6 @@ h3,
 h4,
 .h4 {
   font-size: 30px;
-  margin-bottom: 35px;  
 }
 h5,
 .h5 {
@@ -746,6 +775,9 @@ address {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 40px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2059,6 +2091,39 @@ a.thumbnail.active {
   td.visible-xs {
     display: table-cell !important;
   }
+  #img-ampelinis-dash {
+    position: absolute;
+    right:0px;
+    top:-127px;
+    height: 300px;
+    z-index: 100;
+  }
+  #head-layout {
+    display: none;
+  }
+  #head-top {
+    display: inline;
+  }
+  #img-composite {
+    margin-top: 110px;
+  }
+  #app-store-badge {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    width: 120px;
+    z-index: 99;
+  }
+  #img-ios-devices {
+    position: absolute;
+    left:20%;
+    bottom: -30px;    
+    max-width: 60%;
+    z-index: 50;
+  }
+  #ampelini-logo {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .visible-xs-block {
@@ -2088,6 +2153,23 @@ a.thumbnail.active {
   th.visible-sm,
   td.visible-sm {
     display: table-cell !important;
+  }
+  #ampelini-logo-top {
+    display: none;
+  }
+  #ampelini-logo {
+    left: 10px;
+    top: -120px;
+    width: 320px;
+    position: absolute;
+    display: block;
+    z-index: 101;
+  }
+  #head-top {
+    display: none;
+  }
+  #head-layout {
+    display: inline;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2119,6 +2201,29 @@ a.thumbnail.active {
   td.visible-md {
     display: table-cell !important;
   }
+  #ampelini-logo-top {
+    display: none;
+  }
+  #ampelini-logo {
+    left: 20px;
+    top: -140px;
+    width: 375px;
+    position: absolute;
+    display: block;
+    z-index: 101;
+  }
+  #head-top {
+    display: none;
+  }
+  #head-layout {
+  font-size: 45px;
+  width: 450px;
+  left: 40px;
+  top: 80px;
+  }
+  #app-store-badge {
+    left: 40px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-block {
@@ -2148,6 +2253,29 @@ a.thumbnail.active {
   th.visible-lg,
   td.visible-lg {
     display: table-cell !important;
+  }
+  #ampelini-logo-top {
+    display: none;
+  }
+  #ampelini-logo {
+    left: 35px;
+    top: -150px;
+    width: 430px;
+    position: absolute;
+    display: block;
+    z-index: 101;
+  }
+  #head-top {
+    display: none;
+  }
+  #head-layout {
+    font-size: 50px;
+    width: 500px;
+    left: 50px;
+    top: 80px;
+  }
+  #app-store-badge {
+    left: 50px;
   }
 }
 @media (min-width: 1200px) {
