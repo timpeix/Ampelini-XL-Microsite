@@ -250,7 +250,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   margin-right: auto; 
   margin-left: auto;  
   
@@ -300,15 +300,15 @@ img {
 #img-ampelinis-dash {
     position: absolute;
     right:0px;
-    top:-170px;
-    height: 400px;
+    top: -170px;
+    height: 216px;
     z-index: 100;
 }
 #app-store-badge {
     position: absolute;
     left: 20px;
     bottom: 30px;
-    z-index: 100;
+    z-index: 110;
     width: 130px;
 }
 #img-ios-devices {
@@ -2078,6 +2078,15 @@ a.thumbnail.active {
 .visible-lg-inline-block {
   display: none !important;
 }
+@media (max-width: 479px) {
+  #app-store-badge {
+    position: relative;
+    top: 80px;
+    left: 10px;
+    z-index: 10;
+    width: 120px;
+  }  
+}
 @media (max-width: 767px) {
   .visible-xs {
     display: block !important;
@@ -2094,9 +2103,9 @@ a.thumbnail.active {
   }
   #img-ampelinis-dash {
     position: absolute;
-    right:0px;
-    top:-127px;
-    height: 300px;
+    right:5%;
+    top:-149px;
+    height: 190px;
     z-index: 100;
   }
   #head-layout {
@@ -2106,20 +2115,20 @@ a.thumbnail.active {
     display: inline;
   }
   #img-composite {
-    margin-top: 110px;
+    margin-top: 130px;
   }
   #app-store-badge {
     position: absolute;
     top: -50px;
     left: 10px;
-    z-index: 99;
+    z-index: 110;
     width: 120px;
   }
   #img-ios-devices {
     position: absolute;
-    left:20%;
+    left: 15%;
     bottom: -30px;    
-    max-width: 60%;
+    max-width: 70%;
     z-index: 50;
   }
   #ampelini-logo {
